@@ -1,0 +1,18 @@
+nav{
+    background-color: black;  
+    width: 83%;
+    padding: 15px;
+    font-size: 15px;
+    float: left;
+    margin : 0px;
+}
+nav a{
+  padding: 14px;
+  color: #ccc;
+}
+nav a:hover {
+  background-color: #ddd;
+  color: black;
+  border-radius:2px;
+  padding: 14px;
+}

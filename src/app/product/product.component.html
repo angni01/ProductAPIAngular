@@ -1,0 +1,34 @@
+<div>
+    <table>
+        <thead>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Price</th>
+        </thead>
+        <tbody>
+            <tr *ngFor = 'let product of products' >
+                <td><img src={{product.imageUrl}}/></td>
+                <td>{{product.name}}</td>
+                <td>{{product.price}}</td>
+                <td><button (click)="showEditDetails(product)">Edit</button>
+                    <button (click)="deleteProduct(product.id)">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div>
+<form [formGroup]="productForm" (ngSubmit)="submitForm()">
+    <h1>Add Product</h1>
+    <label>ID</label>
+    <input formControlName='id' readonly/> <br>
+    <label>Name</label>
+    <input formControlName='name'/> <br>
+    <label>Price</label>
+    <input formControlName='price' type="number"/><br>
+    <label>Description</label>
+    <input formControlName='description'/><br>
+    <label>Image Url</label>
+    <input formControlName='imageUrl'/><br>
+    <button type="submit">{{mode}} product</button>
+</form>
+</div>
